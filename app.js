@@ -44,9 +44,9 @@ app.use('/user', rutaUser);
 
 app.use('/product', rutaProduct);
 
-const port = process.env.PORT || 3022
+const port = process.env.DB_PORT || 3306
 
-app.listen(port, () => console.log(`Servidor corriendo en el puerto ${port}`));
+const server = app.listen(port, () => console.log(`Servidor corriendo en el puerto ${port}`));
 //error 404
 app.use((req,res,next)=>{
     res.status(404).render("not-found")
