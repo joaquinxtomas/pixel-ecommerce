@@ -9,8 +9,6 @@ const productDashboard = {
 
         try {
             var productos = await db.Product.findAll({ include: { all: true } });
-            // const categorias = await db.Category.findAll({ include: { all: true } });
-            // let newProducts = productos.map(element => ({...element, detail:`product/api/detail/${element.id}`}));
 
             // SQL search to count by category
 
